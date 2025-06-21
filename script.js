@@ -30,32 +30,12 @@ const currentDayInfo = document.getElementById('currentDayInfo');
 
 // Initialize the application
 function init() {
-    loadUserPreferences();
     setDefaultHighlighting();
     renderTimetable();
     updateComparisonSummary();
     updateCurrentDayInfo();
     setupEventListeners();
 }
-
-// Load user preferences from localStorage
-function loadUserPreferences() {
-    const saved = localStorage.getItem('timetablePreferences');
-    if (saved) {
-        try {
-            const preferences = JSON.parse(saved);
-            if (preferences.yellowDay && preferences.greenDay) {
-                currentHighlighting = preferences;
-                yellowDaySelect.value = preferences.yellowDay;
-                greenDaySelect.value = preferences.greenDay;
-                return;
-            }
-        } catch (e) {
-            console.error('Error loading preferences:', e);
-        }
-    }
-}
-
 
 // Set default highlighting based on current day
 function setDefaultHighlighting() {
