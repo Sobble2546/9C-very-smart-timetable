@@ -37,6 +37,8 @@ function init() {
     setupEventListeners();
 }
 
+
+
 // Set default highlighting based on current day
 function setDefaultHighlighting() {
     const today = new Date();
@@ -82,7 +84,7 @@ function setDefaultHighlighting() {
         }
     }
     
-    // Always set default values (no localStorage persistence)
+    // Always set defaults (no localStorage anymore)
     currentHighlighting.yellowDay = yellowDay;
     currentHighlighting.greenDay = greenDay;
     yellowDaySelect.value = yellowDay;
