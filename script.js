@@ -1,11 +1,11 @@
 // Default timetable data (from actual school timetable)
 const DEFAULT_TIMETABLE = {
-    MONDAY: ['HIND', 'ENG', 'MATH', 'ENG', 'FCP', 'SST', 'SCI', 'SCI'],
-    TUESDAY: ['HIND', 'SCI', 'MATH', 'ENG', 'SST', 'ENG', 'SST', 'SCI'],
-    WEDNESDAY: ['MPT', 'HIN', 'MATH', 'SCI', 'SST', 'ENG', 'PE', 'PE'],
-    THURSDAY: ['HIN', 'ENG', 'SCI', 'SST', 'VE', 'MATH', 'ART', 'ART'],
-    FRIDAY: ['HIN', 'PE', 'SCI', 'HIN', 'MATH', 'SST', 'ENG', 'ENG'],
-    SATURDAY: ['CLA', 'CLA', 'MATH', 'HIND', 'SST', 'ENG', 'SCI', 'LIB']
+    MONDAY: ['HINDI', 'ENG', 'MATHS', 'ENG', 'FCP', 'SST', 'SCI', 'AI'],
+    TUESDAY: ['HINDI', 'SCI', 'SCI', 'MATHS', 'ENG', 'SST', 'AI', 'SST'],
+    WEDNESDAY: ['MPT', 'HINDI', 'MATHS', 'MATHS', 'SCI', 'SST', 'ENG', 'PE'],
+    THURSDAY: ['HINDI', 'ENG', 'SCI', 'SST', 'VE', 'MATHS', 'AI', 'ART'],
+    FRIDAY: ['HINDI', 'PE', 'SCI', 'HINDI', 'MATHS', 'SST', 'AI', 'ENG'],
+    SATURDAY: ['CLA', 'CLA', 'MATHS', 'HINDI', 'SST', 'ENG', 'SCI', 'LIB']
 };
 
 // Teacher codes to ignore in comparison
