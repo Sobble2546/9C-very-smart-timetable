@@ -8,7 +8,7 @@ const DEFAULT_TIMETABLE = {
     SATURDAY: ['CLA', 'CLA', 'MATH', 'HIND', 'SST', 'ENG', 'SCI', 'LIB']
 };
 
-// Teacher codes to ignore in comparison (note to myself to remove this frfr)
+// Teacher codes to ignore in comparison
 const TEACHER_CODES = ['DA', 'JP', 'PB', 'AK', 'APG', 'MK', 'KRP', 'SKA', 'PS'];
 
 // Days of the week
@@ -82,13 +82,11 @@ function setDefaultHighlighting() {
         }
     }
     
-    // Only set defaults if not already set by user preferences
-    if (!currentHighlighting.yellowDay || !currentHighlighting.greenDay) {
-        currentHighlighting.yellowDay = yellowDay;
-        currentHighlighting.greenDay = greenDay;
-        yellowDaySelect.value = yellowDay;
-        greenDaySelect.value = greenDay;
-    }
+    // Always set default values (no localStorage persistence)
+    currentHighlighting.yellowDay = yellowDay;
+    currentHighlighting.greenDay = greenDay;
+    yellowDaySelect.value = yellowDay;
+    greenDaySelect.value = greenDay;
 }
 
 // Check if a given date is the second Saturday of the month
@@ -220,22 +218,17 @@ function updateCurrentDayInfo() {
 function setupEventListeners() {
     yellowDaySelect.addEventListener('change', (e) => {
         currentHighlighting.yellowDay = e.target.value;
-        saveUserPreferences();
         renderTimetable();
         updateComparisonSummary();
     });
     
     greenDaySelect.addEventListener('change', (e) => {
         currentHighlighting.greenDay = e.target.value;
-        saveUserPreferences();
         renderTimetable();
         updateComparisonSummary();
     });
     
     resetBtn.addEventListener('click', () => {
-        // Clear saved preferences
-        localStorage.removeItem('timetablePreferences');
-        
         // Reset to default highlighting
         currentHighlighting = { yellowDay: null, greenDay: null };
         setDefaultHighlighting();
