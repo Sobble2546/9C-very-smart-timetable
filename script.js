@@ -56,10 +56,6 @@ function loadUserPreferences() {
     }
 }
 
-// Save user preferences to localStorage
-function saveUserPreferences() {
-    localStorage.setItem('timetablePreferences', JSON.stringify(currentHighlighting));
-}
 
 // Set default highlighting based on current day
 function setDefaultHighlighting() {
