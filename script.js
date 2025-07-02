@@ -1,8 +1,8 @@
 // Default timetable data (from actual school timetable)
 const DEFAULT_TIMETABLE = {
-    MONDAY: ['HINDI', 'ENG', 'MATHS', 'ENG', 'FCP', 'SST', 'SCI', 'AI'],
+    MONDAY: ['HINDI', 'SCI', 'MATHS', 'ENG', 'FCP', 'SST', 'MATHS', 'AI'],
     TUESDAY: ['HINDI', 'SCI', 'SCI', 'MATHS', 'ENG', 'SST', 'AI', 'SST'],
-    WEDNESDAY: ['MPT', 'HINDI', 'MATHS', 'MATHS', 'SCI', 'SST', 'ENG', 'PE'],
+    WEDNESDAY: ['MPT', 'HINDI', 'MATHS', 'ENG', 'SCI', 'SST', 'ENG', 'PE'],
     THURSDAY: ['HINDI', 'ENG', 'SCI', 'SST', 'VE', 'MATHS', 'AI', 'ART'],
     FRIDAY: ['HINDI', 'PE', 'SCI', 'HINDI', 'MATHS', 'SST', 'AI', 'ENG'],
     SATURDAY: ['CLA', 'CLA', 'MATHS', 'HINDI', 'SST', 'ENG', 'SCI', 'LIB']
